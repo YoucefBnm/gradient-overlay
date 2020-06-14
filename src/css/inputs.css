@@ -1,0 +1,91 @@
+input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    border: 0;
+    border-radius: 6px;
+    height: 6px;
+    cursor: pointer;
+    outline: none;
+    background-color: rgba(58,134,255, .2);;
+    padding: 0;
+    transition: all .15s ease-in-out;
+}
+input[type=range]:focus {
+    background-color: rgba(58,134,255, .5);
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 50%;
+    border: 0;
+    position: relative;
+    width: 10px;
+    height: 15px;
+    background-color: var(--color-blue-2);
+}
+
+input[type=color] {
+    margin: 0;
+    padding: 0 .5em;
+    font-size: inherit;
+    font-family: inherit;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    padding: 0;
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+}
+input[type=color]::-moz-color-swatch {
+    border: none;
+    border-radius: 50%;
+    transform: scale(.75);
+
+}
+input[type=color]::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+input[type=color]::-webkit-color-swatch-wrapper {
+    padding: .25em;
+    border-radius: 50%;
+}
+input {
+    font-family: inherit;
+    font-size: 16px;
+    padding: 5px 8px;
+    outline: none;
+    position: relative;
+    background: none;
+    border: none;
+    color: #fff;
+}
+.select-wrap {
+    position: relative;
+    width: 65%;
+}
+.select-wrap::after{
+    content: '\25BC';
+    position: absolute;
+    font-size: 10px;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: currentColor;
+}
+select {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    font-family: inherit;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid var(--color-grey);
+    border-radius: 20px;
+    padding: 8px 20px 8px 20px;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+}

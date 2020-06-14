@@ -1,0 +1,77 @@
+.img-container {
+    height: 100vh;
+    width: 100%;
+    background: url("https://picsum.photos/900/500");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+.screen-btn {
+    position: absolute;
+    z-index: 5;
+    left: 5px;
+    top: 10px;
+    width: 35px;
+    height: 35px;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 7px 4px;
+    background-color: rgba(0,0,0, .5);
+}
+.screen-btn span:first-child{
+    width: 80%;
+}
+.screen-btn span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #FAFAFA;
+    opacity: .7;
+    border-radius: 0;
+    transition: var(--default-transition);
+}
+.screen-btn:hover span {
+    opacity: 1;
+}
+.screen-btn:hover span:first-child {
+    width: 100%;
+}
+
+#overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.github-link {
+    position: fixed;
+    top: 10px;
+    right: 25px;
+    z-index: 999;
+    padding: 2px 10px;
+    background-color: #eee;
+    background-image: linear-gradient(to bottom,#fcfcfc 0,#eee 100%);
+    background-repeat: no-repeat;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    font-size: 15px;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 700;
+    transition: var(--default-transition);
+}
+.github-link:hover {
+    box-shadow: var(--default-box-shadow);
+}
+#github-icon {
+    fill: var(--color-dark-2); 
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+}
+

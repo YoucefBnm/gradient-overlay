@@ -1,0 +1,8 @@
+@import "./var.css" screen;
+@import "./main.css" screen;
+@import "./media-query.css" screen;
+@import "./inputs.css" screen;
+@import "./nav.css" screen;
+@import "./img-container.css" screen;
+@import './footer.css' screen;
+@import "./modal.css" screen;

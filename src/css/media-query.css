@@ -1,0 +1,15 @@
+@media only screen and (max-width: 765px) {
+   html {
+       font-size: 50%;
+   }
+    .nav {
+        padding: 20px 5px;
+    }
+    .nav-container:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    input,
+    select {
+        padding: 4px;
+    }
+}

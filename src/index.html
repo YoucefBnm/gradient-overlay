@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Overlay | easelly edit your website images</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <a href="#" rel="noopener noreferrer" target="_blank" aria-label="Star JosefBnm/gradient-overlay on Github" class="github-link">
+        <svg id="github-icon">
+            <use xlink:href="img/icons.svg#icon-github"></use>
+        </svg>
+        <span>Star</span>
+    </a>
+    
+    <main class="container-main">
+        <nav class="nav">
+            <div class="title-main">
+                <svg>
+                    <use href="img/icons.svg#icon-cogs"></use>
+                </svg>
+                <h2>settings</h2>
+            </div>
+
+            <div class="nav-container">
+                <div class="title-secondary">
+                    <svg>
+                        <use xlink:href="img/icons.svg#icon-image"></use>
+                    </svg>
+                    <h3>background image</h3>
+                </div>
+                <div class="input-group" id="input-img">
+                    <input type="text" id="img-url" placeholder="change image url">
+                    <button id="btn-submit" type="button">
+                        <svg>
+                            <use xlink:href="img/icons.svg#icon-in-alt"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="nav-container">
+                <div class="title-secondary">
+                    <svg>
+                        <use xlink:href="img/icons.svg#icon-gradient"></use>
+                    </svg>
+                    <h3>gradient type</h3>
+                </div>
+                <div class="input-group select-wrap">
+                    <select id="gradient-type">
+                        <option value="linear-gradient">linear gradient</option>
+                        <option value="radial-gradient">radial gradient</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="nav-container">
+                <div class="title-secondary title-color">
+                    <svg>
+                        <use xlink:href="img/icons.svg#icon-color_lens"></use>
+                    </svg>
+                    <h3>colors</h3> 
+                    <button type='color' class="btn btn-add">
+                        <svg>
+                            <use xlink:href="img/icons.svg#icon-add_circle_outline"></use>
+                        </svg>
+                        <span>add color</span>
+                    </button>
+                </div>
+                <ul id="colors-list">
+                    <li class="color">
+                        <input type="color" class="input-color" value="#197278">
+                        <div class="wrap-opacity">
+                            <input type="range" class="input-opacity" value="85" min="0" max="100">
+                            <div class="tooltip tooltip--left wrap-value">
+                                <span class="opacity-value">opacity</span>
+                            </div>
+                        </div>
+                        <button class="btn-remove" type="button">&times;</button>
+                    </li>
+                    <li class="color">
+                        <input type="color" class="input-color" value="#f94144">
+                        <div class="wrap-opacity">
+                            <input type="range" class="input-opacity" value="60" min="0" max="100">
+                            <div class="tooltip tooltip--left wrap-value">
+                                <span class="opacity-value">opacity</span>
+                            </div>
+                        </div>
+                        <button class="btn-remove" type="button">&times;</button>
+                    </li>
+                    <li class="color">
+                        <input type="color" class="input-color" value="#3a86ff">
+                        <div class="wrap-opacity">
+                            <input type="range" class="input-opacity" value="45" min="0" max="100">
+                            <div class="tooltip tooltip--left wrap-value">
+                                <span class="opacity-value">opacity</span>
+                            </div>
+                        </div>
+                        <button class="btn-remove" type="button">&times;</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-container">
+                <div class="title-secondary">
+                    <svg>
+                        <use xlink:href="img/icons.svg#icon-rotate_90_degrees_ccw"></use>
+                    </svg>
+                    <h3>gradient degree</h3>
+                </div>
+                <div class="input-group" id="degree-group">
+                    <input type="range" id="input-degree" min="-360" max="360" value="45">
+                    <div class="tooltip tooltip--left wrap-value" id="degree-value">
+                        <span id="degree-value">degree</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-container">
+                <div class="title-secondary">
+                    <svg>
+                        <use xlink:href="img/icons.svg#icon-surround_sound"></use>
+                    </svg>
+                    <h3>radial shape</h3>
+                </div>
+                <div class="input-group select-wrap">
+                    <select name="radial-shape" id="radial-shape">
+                        <option value="ellipse">ellipse</option>
+                        <option value="circle">circle</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="nav-container">
+                <div class="title-secondary">
+                    <svg>
+                        <use xlink:href="#repeat1"></use>
+                    </svg>
+                    <h3>direction</h3>
+                </div>
+                <div class="input-group select-wrap">
+                    <select name="gradient-direction" id="gradient-direction">
+                        <option value="top">top</option>
+                        <option value="right">right</option>
+                        <option value="bottom">bottom</option>
+                        <option value="left">left</option>
+                    </select>
+                </div>
+            </div>
+
+            <button id="btn-modal" type="button">
+                <svg>
+                    <use xlink:href="img/icons.svg#icon-embed"></use>
+                </svg>
+                get code
+            </button>
+        </nav>
+        
+        <div class="img-container">
+            <button role="button" class="screen-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div id="overlay"></div>
+        </div>
+    </main>
+
+    <div class="modal">
+        <div class="modal-body">
+            <span id="btn-close-modal">&times;</span>
+
+            <div class="modal-container">
+                <div class="modal-title">
+                    <div class="title-secondary">
+                        <svg>
+                            <use xlink:href="img/icons.svg#icon-html-five"></use>
+                         </svg>
+                        <h3>HTML Code</h3>
+                    </div>
+                    <button class="btn-copy" id="html-copy">
+                        <svg>
+                            <use xlink:href="img/icons.svg#icon-file_copy"></use>
+                        </svg>
+                        <div class="tooltip tooltip--top" id="copied-html">
+                            <span>copied</span>
+                        </div>
+                    </button>
+                </div>
+                <div class="code-wrap" id="html-code">
+                    &lt;<span class="html-tag">div</span>
+                     <span class="html-attr">class</span>=
+                     <span class="html-attr-name">"image-gradient"</span>&gt;
+                     &lt;&sol;<span class="html-tag">div</span>&gt;
+                </div>
+            </div>
+
+            <div class="modal-container">
+                <div class="modal-title">
+                    <div class="title-secondary">
+                        <svg>
+                            <use xlink:href="img/icons.svg#icon-css3"></use>
+                         </svg>
+                        <h3>CSS Code</h3>
+                    </div>
+                    <button class="btn-copy" id="css-copy">
+                        <svg>
+                            <use xlink:href="img/icons.svg#icon-file_copy"></use>
+                        </svg>
+                        <div class="tooltip tooltip--top" id="copied-css">
+                            <span>copied</span>
+                        </div>
+                    </button>
+                </div>
+
+                <div class="code-wrap" id="css-code">
+                    <div class="code-group">
+                        <span class="css-selector">.image-gradient</span> {
+                        <div class="css-style">
+                            <div class="style-group">
+                                <span class="css-prop">height</span>:
+                                <span class="css-value"> 100vh</span>;
+                            </div>                   
+                            <div class="style-group">
+                                <span class="css-prop">width</span>:
+                                <span class="css-value"> 100%</span>;
+                            </div> 
+                            <div class="style-group">
+                                <span class="css-prop">position</span>:
+                                <span class="css-value"> relative</span>;
+                            </div>
+                            <div class="style-group">
+                                <span class="css-prop">background-image</span>:
+                                <span class="css-value" id="bg-url-value">url("https://picsum.photos/900/500")</span>;
+                            </div>
+                            <div class="style-group">
+                                <span class="css-prop">background-size</span>:
+                                <span class="css-value" id="bg-url-value">100% 100%</span>;
+                            </div>
+                            <div class="style-group">
+                                <span class="css-prop">background-attachment</span>:
+                                <span class="css-value" id="bg-url-value">fixed</span>;
+                            </div>
+                        </div>}
+                    </div>
+
+                    <div class="code-group">
+                        <span class="css-selector">.image-gradient::after</span> {
+                        <div class="css-style">
+                            <div class="style-group">
+                                <span class="css-prop">content</span>:
+                                <span class="css-value"> ""</span>;
+                            </div>
+                            <div class="style-group">
+                                <span class="css-prop">position</span>:
+                                <span class="css-value"> absolute</span>;
+                            </div>
+                            <div class="style-group">
+                                <span class="css-prop">top</span>:
+                                <span class="css-value"> 0</span>;
+                            </div>
+                            <div class="style-group">
+                                <span class="css-prop">left</span>:
+                                <span class="css-value"> 0</span>;
+                            </div>
+                            <div class="style-group">
+                                <span class="css-prop">width</span>:
+                                <span class="css-value"> 100%</span>;
+                            </div>
+                            <div class="style-group">
+                                <span class="css-prop">height</span>:
+                                <span class="css-value"> 100%</span>;
+                            </div>
+                            <div class="style-group">
+                                <span class="css-prop">background-image</span>:
+                                <span class="css-value" id="gradient-value"></span>;
+                            </div>
+                        </div>}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <!-- to add product hunt later -->
+        <div class="footer-container">
+            <div class="logo-box">
+                <img class="logo-img" src="img/logo.png" alt="logo">
+                <h1 class="heading-main">gradient overlay</h1>
+            </div>
+            
+        </div>
+        <div class="footer-container">
+            <p class="footer-text">easelly customize your website images</p>
+            <p class="footer-text">no need for a software generate gradients<br> with different colors and gradients linear or radial</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,51 @@
+{
+  "name": "gradient-overlay",
+  "version": "1.0.0",
+  "description": "web images customization",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YoucefBnm/gradient-overlay.git"
+  },
+  "keywords": [
+    "css-gradints",
+    "overlay",
+    "linear-gradient",
+    "radial-gradient",
+    "custom-web-images"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^3.4.2",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "multi-loader": "^0.1.0",
+    "node-sass": "^4.13.1",
+    "postcss-cli": "^7.1.0",
+    "postcss-loader": "^3.0.0",
+    "svg-sprite-html-webpack": "^2.3.0",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "hex-rgb": "^4.1.0"
+  },
+  "author": "Josef Bnm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YoucefBnm/gradient-overlay/issues"
+  },
+  "homepage": "https://github.com/YoucefBnm/gradient-overlay#readme"
+}

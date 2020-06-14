@@ -1,0 +1,28 @@
+footer {
+    padding: 30px 45px;
+    text-align: center;
+}
+.logo-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+.logo-img {
+    width: 120px;
+    height: auto;
+    margin-right: 35px;
+    border-radius: 50%;
+}
+.heading-main {
+    display: inline-block;
+    background: radial-gradient(
+    circle farthest-corner at center center,var(--color-dark-2), rgb(202,51,55)) no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.footer-text {
+    color: var(--color-dark-2);
+}
+
